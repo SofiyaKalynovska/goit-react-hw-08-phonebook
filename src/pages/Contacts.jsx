@@ -9,7 +9,7 @@ import { selectIsLoading, selectError } from 'redux/selectors';
 import { ThreeDots } from 'react-loader-spinner';
 import { Container } from '../components/App.styled';
 
-export const Contacts = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -43,3 +43,5 @@ export const Contacts = () => {
     </Container>
   );
 };
+
+export default Contacts;
