@@ -9,9 +9,9 @@ const setAuthHeader = token => {
 }
 
 //Utility to clear JSON Web Token
-// const clearAuthHeader = () => {
-//   axios.defaults.headers.common.Authorization = ''
-// }
+const clearAuthHeader = () => {
+  axios.defaults.headers.common.Authorization = ''
+}
 //Information about user:
 export const register = createAsyncThunk(
   'auth/register',
@@ -44,10 +44,17 @@ export const logOut = createAsyncThunk(
 'auth/logout',
   async (_, thunkAPI) => {
   try {
-    const response = await axios.post('/users/logout');
-    return response.data
+    await axios.post('/users/logout');
+    clearAuthHeader();
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message)
   }
 }
+)
+
+export const refreshUser = createAsyncThunk(
+  'auth/refresh',
+  async (_, thunkAPI) => {
+    
+  }
 )
