@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { refreshUser } from 'redux/authOperations';
 import { Layout } from './Layout';
+import { RestrictedRoute } from './RestrictedRoute';
 
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LogInPage = lazy(() => import('../pages/LogIn'));
@@ -23,7 +24,7 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="login" />} />
         <Route path="register" element={<RegisterPage />} />
-        <Route path="login" element={<LogInPage />} />
+        <Route path="login" element={<RestrictedRoute component={<LogInPage />} redirectTo="/contacts" />} />
         <Route path="contacts" element={<ContactsPage />} />
       </Route>
     </Routes>
