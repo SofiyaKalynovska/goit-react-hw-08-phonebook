@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { refreshUser } from 'redux/authOperations';
 import { Layout } from './Layout';
 import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from './PrivateRoute';
 
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LogInPage = lazy(() => import('../pages/LogIn'));
@@ -31,8 +32,11 @@ export const App = () => {
             <RestrictedRoute redirectTo="/contacts" component={<LogInPage />} />
           }
         />
-        ;{/* <Route path="login" element={< LogInPage /> } /> */}
-        <Route path="contacts" element={<ContactsPage />} />
+        ;
+        <Route
+          path="contacts"
+          element={<PrivateRoute redirectTo="/login" component={<ContactsPage />} />}
+        />
       </Route>
     </Routes>
   );
