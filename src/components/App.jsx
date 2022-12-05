@@ -1,7 +1,7 @@
 import { useAuth } from 'hooks/useAuth';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { refreshUser } from 'redux/authOperations';
 import { Layout } from './Layout';
 import { RestrictedRoute } from './RestrictedRoute';
@@ -10,6 +10,7 @@ import { PrivateRoute } from './PrivateRoute';
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LogInPage = lazy(() => import('../pages/LogIn'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
+const StartPage = lazy(()=> import ('../pages/Start'))
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ export const App = () => {
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Navigate to="login" />} />
+        <Route index element={<StartPage />} />
         <Route path="register" element={<RegisterPage />} />
         debugger
         <Route
@@ -35,7 +36,9 @@ export const App = () => {
         ;
         <Route
           path="contacts"
-          element={<PrivateRoute redirectTo="/login" component={<ContactsPage />} />}
+          element={
+            <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+          }
         />
       </Route>
     </Routes>
