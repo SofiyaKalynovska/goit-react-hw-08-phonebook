@@ -36,6 +36,7 @@ export const logIn = createAsyncThunk(
       console.log(response.data);
       return response.data
     } catch (error) {
+      alert("There is no user registered by this email and password! Please provide right email and password or register.") 
       return thunkAPI.rejectWithValue(error.message)
     }
   }
