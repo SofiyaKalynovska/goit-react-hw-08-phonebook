@@ -6,11 +6,11 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
   return (
     <nav>
-      {isLoggedIn && (
+      {isLoggedIn ? (
         <Link to="/contacts">
           Contacts
         </Link>
-      )}
+      ) : <Link to="/">Start</Link>}
       
     </nav>
   );
