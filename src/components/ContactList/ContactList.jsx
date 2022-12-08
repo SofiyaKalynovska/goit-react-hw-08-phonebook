@@ -2,6 +2,7 @@ import { ContactsList, ListItem, DeleteBtn } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectFilter } from 'redux/selectors';
 import { deleteContact } from 'redux/operations';
+import { List } from '@mui/material';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -12,7 +13,7 @@ const ContactList = () => {
   );
 
   return (
-    <ContactsList>
+    <List>
       {visibleContacts.map(contact => (
         <ListItem key={contact.id}>
           {contact.name}: {contact.number}
@@ -24,7 +25,7 @@ const ContactList = () => {
           </DeleteBtn>
         </ListItem>
       ))}
-    </ContactsList>
+    </List>
   );
 };
 

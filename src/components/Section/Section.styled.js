@@ -4,9 +4,10 @@ export const SectionBox = styled.section`
 max-width: 1200px;
 color: black;
 font-size: 20px;
+margin: auto;
 padding: 20px;
-border: 1px solid black;
-box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+
 :not(:last-child){
   margin-top: 20px;
 }

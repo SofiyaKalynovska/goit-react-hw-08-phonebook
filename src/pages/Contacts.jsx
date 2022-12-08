@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
 import { selectIsLoading, selectError } from 'redux/selectors';
 import { ThreeDots } from 'react-loader-spinner';
-import { Container } from '../components/App.styled';
+import { Wrapper } from '../components/App.styled';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const Contacts = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Wrapper>
       <Section title="Phonebook">
         <ContactForm />
       </Section>
@@ -40,7 +40,7 @@ const Contacts = () => {
         )}
         <ContactList />
       </Section>
-    </Container>
+    </Wrapper>
   );
 };
 

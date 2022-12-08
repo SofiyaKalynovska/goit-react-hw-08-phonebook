@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Form, InputName, Input, AddContact } from './ContactForm.styled';
+import { Form } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
+import { Box,  Button, TextField, Typography } from '@mui/material';
+import { AddBoxTwoTone } from '@mui/icons-material';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -36,29 +38,46 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <InputName>Name</InputName>
-      <Input
-        type="text"
-        value={name}
-        onChange={handleChange}
-        name="name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-        required
-      />
-      <InputName>Number</InputName>
-      <Input
-        type="tel"
-        value={number}
-        onChange={handleChange}
-        name="number"
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-      />
-      <AddContact type="submit">Add contact</AddContact>
-    </Form>
+    <Box>
+      <Form onSubmit={handleSubmit}>
+        <Typography variant="body" component="label" color="#1976d2">
+          Name
+        </Typography>
+        <TextField
+          label="Provide name"
+          variant="filled"
+          type="text"
+          value={name}
+          onChange={handleChange}
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+        />
+        <Typography variant="body" component="label" color="#1976d2" >
+          Number
+        </Typography>
+        <TextField
+          label="Provide number"
+          variant="filled"
+          type="tel"
+          value={number}
+          onChange={handleChange}
+          name="number"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+        />
+        <Button
+          variant="contained"
+          startIcon={<AddBoxTwoTone />}
+          color="info"
+          type="submit"
+        >
+          Add contact
+        </Button>
+      </Form>
+    </Box>
   );
 };
 

@@ -1,10 +1,12 @@
+import { Container, Typography } from '@mui/material';
 
-export default function Start () {
+export default function Start() {
   return (
-    
-      <p>
-      Welcome to the Phonebook!  To start managing contacts, please log in or register.
-      </p>
-   
+    <Container sx={{ padding: "50px" }}>
+      <Typography component="h2" variant="h3" align="center">
+        Welcome to the Phonebook! To start managing contacts, please log in or
+        register.
+      </Typography>
+    </Container>
   );
-};
+}

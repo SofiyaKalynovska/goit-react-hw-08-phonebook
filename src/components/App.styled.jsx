@@ -1,15 +1,17 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { Container } from '@mui/material';
 
-export const Container = styled.div`
+export const Wrapper = styled(Container)`
+  padding: 20px;
   margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    
   width: 300px;
   @media (min-width: 480px) {
     width: 420px;
   }
   @media (min-width: 768px) {
     width: 700px;
+  }
+  @media (min-width: 1280px) {
+    width: 1000px;
   }
 `;

@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { List } from '@mui/material';
 
-export const ContactsList = styled.ol`
+export const ContactsList = styled(List)`
 padding: 10px;
 `
 export const ListItem = styled.li`
