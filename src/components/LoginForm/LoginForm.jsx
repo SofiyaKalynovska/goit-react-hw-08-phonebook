@@ -1,10 +1,15 @@
 import { useDispatch } from 'react-redux';
-import {logIn} from "../../redux/authOperations"
+import { logIn } from '../../redux/authOperations';
+import { LoginTwoTone } from '@mui/icons-material';
 import {
-  LoginFormStyled,
-  LoginFormLabel,
-  LoginFormInput,
-} from './LoginForm.styled';
+  Avatar,
+  Container,
+  Box,
+  Typography,
+  TextField,
+  Button,
+} from '@mui/material';
+import { Form } from 'components/ContactForm/ContactForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -22,16 +27,53 @@ export const LoginForm = () => {
   };
 
   return (
-    <LoginFormStyled onSubmit={handleSubmit} autoComplete="off">
-      <LoginFormLabel >
-        Email
-        <LoginFormInput type="email" name="email" />
-      </LoginFormLabel>
-      <LoginFormLabel>
-        Password
-        <LoginFormInput type="password" name="password" />
-      </LoginFormLabel>
-      <button type="submit">Log In</button>
-    </LoginFormStyled>
+    <Container maxWidth="xl">
+      <Box
+        sx={{
+          backgroundColor: '#e8ebff',
+          marginTop: '30px',
+          border: '3px solid #1976d2',
+          padding: 2,
+          borderRadius: 3,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <Avatar alt="Register icon" sx={{ m: 1 }}>
+          <LoginTwoTone />
+        </Avatar>
+        <Typography component="h1" variant="h4" color="#1976d2">
+          Log in
+        </Typography>
+        <Form onSubmit={handleSubmit} autoComplete="off">
+          <Typography variant="body" component="label" color="#1976d2">
+            Email
+          </Typography>
+          <TextField
+            label="Provide password"
+            variant="outlined"
+            type="email"
+            name="email"
+            required
+            inputProps={{ style: { fontSize: 24 } }}
+          />
+          <Typography variant="body" component="label" color="#1976d2">
+            Password
+          </Typography>
+          <TextField
+            label="Provide password"
+            variant="outlined"
+            type="password"
+            name="password"
+            required
+            inputProps={{ style: { fontSize: 24 } }}
+          />
+          <Button variant="contained" size="large" color="info" type="submit">
+            Log in
+          </Button>
+        </Form>
+      </Box>
+    </Container>
   );
 };

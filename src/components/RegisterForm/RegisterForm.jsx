@@ -1,8 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/authOperations';
 import { PersonAddAlt1TwoTone } from '@mui/icons-material';
-import { Avatar } from '@mui/material';
-import { Container, Box, Typography, TextField, Button } from '@mui/material';
+import { Avatar, Container, Box, Typography, TextField, Button } from '@mui/material';
 import { Form } from 'components/ContactForm/ContactForm.styled';
 
 export const RegisterForm = () => {
@@ -22,7 +21,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <Container maxWidth="xs">
+    <Container maxWidth="xl">
       <Box
         sx={{
           backgroundColor: '#e8ebff',
