@@ -52,7 +52,7 @@ export const RegisterForm = () => {
             fontSize="40"
             name="name"
             required
-            inputProps={{ style: { fontSize: 24 } }}
+            inputProps={{ style: { fontSize: 24 }}}
           />
           <Typography variant="body" component="label" color="#1976d2">
             Email

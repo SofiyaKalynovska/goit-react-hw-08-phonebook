@@ -3,7 +3,7 @@ import { Form } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
-import { Box,  Button, TextField, Typography } from '@mui/material';
+import { Box, Button, TextField, Typography } from '@mui/material';
 import { AddBoxTwoTone } from '@mui/icons-material';
 
 const ContactForm = () => {
@@ -38,14 +38,23 @@ const ContactForm = () => {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        backgroundColor: '#e8ebff',
+        marginTop: '30px',
+        padding: 2,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
       <Form onSubmit={handleSubmit}>
         <Typography variant="body" component="label" color="#1976d2">
           Name
         </Typography>
         <TextField
           label="Provide name"
-          variant="filled"
+          variant="outlined"
           type="text"
           value={name}
           onChange={handleChange}
@@ -53,13 +62,14 @@ const ContactForm = () => {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
+          inputProps={{ style: { fontSize: 26 } }}
         />
-        <Typography variant="body" component="label" color="#1976d2" >
+        <Typography variant="body" component="label" color="#1976d2">
           Number
         </Typography>
         <TextField
           label="Provide number"
-          variant="filled"
+          variant="outlined"
           type="tel"
           value={number}
           onChange={handleChange}
@@ -67,12 +77,14 @@ const ContactForm = () => {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
+          inputProps={{ style: { fontSize: 26 } }}
         />
         <Button
           variant="contained"
           startIcon={<AddBoxTwoTone />}
           color="info"
           type="submit"
+          sx={{ m: 'auto', fontSize: 20 }}
         >
           Add contact
         </Button>
