@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { List } from '@mui/material';
+import { List, ListItem } from '@mui/material';
 
 export const ContactsList = styled(List)`
 padding: 10px;
 `
-export const ListItem = styled.li`
+export const ContactListItem = styled(ListItem)`
 margin-bottom: 10px;
 height: max-content;
 display: flex;

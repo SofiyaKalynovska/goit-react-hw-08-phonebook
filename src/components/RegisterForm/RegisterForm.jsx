@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/authOperations';
-// import { RegisterFormStyled, RegisterFormLabel, RegisterFormInput } from './RegisterForm.styled';
 import { PersonAddAlt1TwoTone } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 import { Container, Box, Typography, TextField, Button } from '@mui/material';
