@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/474.5478cef0.chunk.js","mappings":"uMACe,SAASA,IACtB,OAEI,4GAKL,C","sources":["pages/Start.jsx"],"sourcesContent":["\nexport default function Start () {\n  return (\n    \n      <p>\n      Welcome to the Phonebook!  To start managing contacts, please log in or register.\n      </p>\n   \n  );\n};\n"],"names":["Start"],"sourceRoot":""}
