@@ -10,11 +10,11 @@ const authSlice = createSlice({
     isRefreshing: false,
   },
   extraReducers: builder => {
-    builder.addCase(register.pending, (state) => state).addCase(register.fulfilled, (state, action) => {
+    builder.addCase(register.fulfilled, (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
-    }).addCase(register.rejected, (state) => state).addCase(logIn.fulfilled, (state, action) => {
+    }).addCase(logIn.fulfilled, (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
