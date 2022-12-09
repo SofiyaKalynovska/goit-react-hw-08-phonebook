@@ -1,4 +1,3 @@
-// import { FilterTitle, FilterInput } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilter } from 'redux/selectors';
 import { changeFilter } from 'redux/filtersSlice';
@@ -26,7 +25,6 @@ const Filter = () => {
         <Typography variant="body" component="label" color="#1976d2">
           Find contacts by name
         </Typography>
-        {/* <FilterTitle>Find contacts by name</FilterTitle> */}
         <TextField
           fullWidth="true"
           label="Start typing..."
@@ -38,12 +36,6 @@ const Filter = () => {
           onChange={handleFilter}
           inputProps={{ style: { fontSize: 20 } }}
         />
-        {/* <FilterInput
-        type="search"
-        name="filter"
-        value={filter}
-        onChange={handleFilter}
-      /> */}
       </Form>
     </Box>
   );
