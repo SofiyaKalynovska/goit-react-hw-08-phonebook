@@ -1,8 +1,14 @@
-import { ContactListItem, DeleteBtn } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectFilter } from 'redux/selectors';
 import { deleteContact } from 'redux/operations';
-import { List } from '@mui/material';
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  Button,
+  ListItemText,
+} from '@mui/material';
+import { Phone } from '@mui/icons-material';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -13,17 +19,37 @@ const ContactList = () => {
   );
 
   return (
-    <List>
+    <List
+      sx={{
+        [`& :hover`]: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
       {visibleContacts.map(contact => (
-        <ContactListItem key={contact.id}>
-          {contact.name}: {contact.number}
-          <DeleteBtn
+        <ListItem
+          key={contact.id}
+          dense={true}
+          sx={{
+            boxShadow: 3,
+          }}
+        >
+          <ListItemIcon>
+            <Phone sx={{ inlineSize: 35 }} />
+          </ListItemIcon>
+          <ListItemText sx={{ fontSize: 26 }} disableTypography>
+            {contact.name}: {contact.number}
+          </ListItemText>
+          <Button
+            color="error"
+            variant="contained"
+            size="small"
             type="button"
             onClick={() => dispatch(deleteContact(contact.id))}
           >
             Delete
-          </DeleteBtn>
-        </ContactListItem>
+          </Button>
+        </ListItem>
       ))}
     </List>
   );
