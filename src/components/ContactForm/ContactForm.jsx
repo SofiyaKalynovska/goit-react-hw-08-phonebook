@@ -49,7 +49,12 @@ const ContactForm = () => {
       }}
     >
       <Form onSubmit={handleSubmit}>
-        <Typography variant="body" component="label" color="#1976d2">
+        <Typography
+          variant="body"
+          component="label"
+          color="#1976d2"
+          sx={{ fontSize: { xs: '20px', sm: '28px' } }}
+        >
           Name
         </Typography>
         <TextField
@@ -64,7 +69,12 @@ const ContactForm = () => {
           required
           inputProps={{ style: { fontSize: 26 } }}
         />
-        <Typography variant="body" component="label" color="#1976d2">
+        <Typography
+          variant="body"
+          component="label"
+          color="#1976d2"
+          sx={{ fontSize: { xs: '20px', sm: '28px' } }}
+        >
           Number
         </Typography>
         <TextField
@@ -84,7 +94,11 @@ const ContactForm = () => {
           startIcon={<AddBoxTwoTone />}
           color="info"
           type="submit"
-          sx={{ m: 'auto', fontSize: 20 }}
+          sx={{
+            m: 'auto',
+            fontSize: {xs: 10, sm: 20},
+            
+          }}
         >
           Add contact
         </Button>
@@ -94,3 +108,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+

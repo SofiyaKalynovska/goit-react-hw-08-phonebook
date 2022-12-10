@@ -33,10 +33,9 @@ export const logIn = createAsyncThunk(
     try {
       const response = await axios.post('/users/login', credentials);
       setAuthHeader(response.data.token);
-      console.log(response.data);
       return response.data
     } catch (error) {
-      alert("There is no user registered by this email and password! Please provide right email and password or register.") 
+      alert("There is no user registered by this email and password! Please provide right email and password or register.")
       return thunkAPI.rejectWithValue(error.message)
     }
   }
@@ -60,7 +59,7 @@ export const refreshUser = createAsyncThunk(
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
     if (persistedToken === null) { return thunkAPI.rejectWithValue('No valid token') };
-    
+
     try {
       setAuthHeader(persistedToken);
       const response = await axios.get("/users/current");
