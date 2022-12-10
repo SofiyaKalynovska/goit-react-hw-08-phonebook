@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/main.c73878c0.js",
+    "main.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/main.c8da92e6.js",
     "static/js/769.f3df9bbf.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/769.f3df9bbf.chunk.js",
-    "static/js/976.6861c9a9.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/976.6861c9a9.chunk.js",
+    "static/js/976.c801e27c.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/976.c801e27c.chunk.js",
     "static/js/511.5b052744.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/511.5b052744.chunk.js",
     "static/js/474.3bb449d2.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/474.3bb449d2.chunk.js",
     "static/js/987.1217b969.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/987.1217b969.chunk.js",
@@ -11,9 +11,9 @@
     "static/js/714.057fd84b.chunk.js": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/714.057fd84b.chunk.js",
     "index.html": "/SofiyaKalynovska/goit-react-hw-08-phonebook/index.html",
     "main.7acaea2f.css.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
-    "main.c73878c0.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/main.c73878c0.js.map",
+    "main.c8da92e6.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/main.c8da92e6.js.map",
     "769.f3df9bbf.chunk.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/769.f3df9bbf.chunk.js.map",
-    "976.6861c9a9.chunk.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/976.6861c9a9.chunk.js.map",
+    "976.c801e27c.chunk.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/976.c801e27c.chunk.js.map",
     "511.5b052744.chunk.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/511.5b052744.chunk.js.map",
     "474.3bb449d2.chunk.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/474.3bb449d2.chunk.js.map",
     "987.1217b969.chunk.js.map": "/SofiyaKalynovska/goit-react-hw-08-phonebook/static/js/987.1217b969.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.c73878c0.js"
+    "static/js/main.c8da92e6.js"
   ]
 }
