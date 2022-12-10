@@ -22,11 +22,11 @@ const Filter = () => {
       }}
     >
       <Form>
-        <Typography variant="body" component="label" color="#1976d2">
+        <Typography variant="body" component="label" color="#1976d2" sx={{fontSize: {xs: '20px', sm: '28px'}}}>
           Find contacts by name
         </Typography>
         <TextField
-          fullWidth="true"
+          fullWidth
           label="Start typing..."
           variant="outlined"
           type="search"
@@ -34,7 +34,7 @@ const Filter = () => {
           name="filter"
           value={filter}
           onChange={handleFilter}
-          inputProps={{ style: { fontSize: 20 } }}
+          inputProps={{ style: { fontSize: 24 } }}
         />
       </Form>
     </Box>
