@@ -37,11 +37,21 @@ export const RegisterForm = () => {
         <Avatar alt="Register icon" sx={{ m: 1 }}>
           <PersonAddAlt1TwoTone />
         </Avatar>
-        <Typography component="h1" variant="h4" color="#1976d2">
+        <Typography
+          component="h1"
+          variant="h4"
+          color="#1976d2"
+          sx={{ fontSize: { xs: 26, sm: 28, md: 32, xl: 36 } }}
+        >
           Sign in
         </Typography>
         <Form onSubmit={handleSubmit} autoComplete="off">
-          <Typography variant="body" component="label" color="#1976d2">
+          <Typography
+            variant="body"
+            component="label"
+            color="#1976d2"
+            sx={{ fontSize: { xs: 20, sm: 22, md: 24, xl: 26 } }}
+          >
             Username
           </Typography>
           <TextField
@@ -52,9 +62,14 @@ export const RegisterForm = () => {
             fontSize="40"
             name="name"
             required
-            inputProps={{ style: { fontSize: 24 }}}
+            inputProps={{ style: { fontSize: 24 } }}
           />
-          <Typography variant="body" component="label" color="#1976d2">
+          <Typography
+            variant="body"
+            component="label"
+            color="#1976d2"
+            sx={{ fontSize: { xs: 20, sm: 22, md: 24, xl: 26 } }}
+          >
             Email
           </Typography>
           <TextField
@@ -65,7 +80,12 @@ export const RegisterForm = () => {
             required
             inputProps={{ style: { fontSize: 24 } }}
           />
-          <Typography variant="body" component="label" color="#1976d2">
+          <Typography
+            variant="body"
+            component="label"
+            color="#1976d2"
+            sx={{ fontSize: { xs: 20, sm: 22, md: 24, xl: 26 } }}
+          >
             Password
           </Typography>
           <TextField
