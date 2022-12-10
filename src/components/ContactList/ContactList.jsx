@@ -32,12 +32,20 @@ const ContactList = () => {
           dense={true}
           sx={{
             boxShadow: 3,
+            display: 'flex',
+            flexDirection: { xs: 'column', sm: 'inherit' },
+            gap: { xs: '1px', sm: '5px' },
+            alignItems: 'center',
           }}
         >
           <ListItemIcon>
-            <Phone sx={{ inlineSize: 35 }} />
+            <Phone sx={{ inlineSize: { xs: 40, sm: 35 } }} />
           </ListItemIcon>
-          <ListItemText sx={{ fontSize: 26 }} disableTypography>
+
+          <ListItemText
+            sx={{ fontSize: { xs: 20, sm: 22, md: 24, xl: 26 } }}
+            disableTypography
+          >
             {contact.name}: {contact.number}
           </ListItemText>
           <Button
