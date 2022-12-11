@@ -10,7 +10,8 @@ import { PrivateRoute } from './PrivateRoute';
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LogInPage = lazy(() => import('../pages/LogIn'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
-const StartPage = lazy(()=> import ('../pages/Start'))
+const StartPage = lazy(() => import('../pages/Start'));
+const NotFoundPage = lazy(() => import('../pages/NotFound'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -52,8 +53,8 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
           }
         />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
 };
-
