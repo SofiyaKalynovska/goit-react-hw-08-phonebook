@@ -3,7 +3,7 @@ import { Box, Typography, Container } from '@mui/material';
 
 export default function Section({ title, children }) {
   return (
-    <Container sx={{mt: 3}}>
+    <Container sx={{mt: 3, padding: 0}}>
       <Box
         sx={{
           backgroundColor: '#e8ebff',
