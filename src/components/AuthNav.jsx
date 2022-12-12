@@ -1,65 +1,57 @@
 import { NavLink } from 'react-router-dom';
-import { Button, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export const AuthNav = () => {
   return (
-    <Box 
+    <Box
       sx={{
-        m: {xs: "5px", sm: "0px"},
+        m: { xs: '5px', sm: '0px' },
         display: 'flex',
         gap: { xs: '5px', sm: '20px' },
         alignItems: 'center',
         flexDirection: { xs: 'column', sm: 'inherit' },
       }}
     >
-      <Button
-        size="small"
-        variant="contained"
-        sx={{
-          fontWeight: 'bold',
-          border: '1px solid white',
-          backgroundColor: '#f7e9c4',
-          borderRadius: 1,
+      <NavLink
+        style={({ isActive }) => ({
           padding: '5px',
-          ':focus-within': { backgroundColor: '#cbba83' },
-        }}
-      >
-        <NavLink style={{ textDecoration: 'none' }} to="/register">
-          <Typography
-            sx={{
-              color: '#1976d2',
-              ':hover': { color: 'red' },
-              fontWeight: 'bold',
-            }}
-          >
-            Register
-          </Typography>
-        </NavLink>
-      </Button>
-      <Button
-        size="small"
-        variant="contained"
-        sx={{
-          fontWeight: 'bold',
           border: '1px solid white',
-          backgroundColor: '#f7e9c4',
-          borderRadius: 1,
-          padding: '5px',
-          ':focus-within': { backgroundColor: '#cbba83' },
-        }}
+          borderRadius: '10%',
+          textDecoration: 'none',
+          background: isActive ? '#cbba83' : '#f7e9c4',
+        })}
+        to="/register"
       >
-        <NavLink style={{ textDecoration: 'none' }} to="/login">
-          <Typography
-            sx={{
-              color: '#1976d2',
-              ':hover': { color: 'red' },
-              fontWeight: 'bold',
-            }}
-          >
-            Log in
-          </Typography>
-        </NavLink>
-      </Button>
+        <Typography
+          sx={{
+            color: '#1976d2',
+            ':hover': { color: 'red' },
+            fontWeight: 'bolder',
+          }}
+        >
+          REGISTER
+        </Typography>
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => ({
+          padding: '5px',
+          border: '1px solid white',
+          borderRadius: '10%',
+          textDecoration: 'none',
+          background: isActive ? '#cbba83' : '#f7e9c4',
+        })}
+        to="/login"
+      >
+        <Typography
+          sx={{
+            color: '#1976d2',
+            ':hover': { color: 'red' },
+            fontWeight: 'bolder',
+          }}
+        >
+          LOG IN
+        </Typography>
+      </NavLink>
     </Box>
   );
 };
