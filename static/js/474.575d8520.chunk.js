@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[474],{2474:function(e,n,o){o.r(n),o.d(n,{default:function(){return c}});var t=o(476),r=o(2812),a=o(184);function c(){return(0,a.jsx)(t.Z,{sx:{padding:"50px"},children:(0,a.jsx)(r.Z,{component:"h2",variant:"h3",align:"center",children:"Welcome to the Phonebook! To start managing contacts, please log in or register."})})}}}]);
-//# sourceMappingURL=474.575d8520.chunk.js.map
