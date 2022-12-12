@@ -1,62 +1,54 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { Box, Button, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
   return (
-    <Box>
+    <>
       {isLoggedIn ? (
-        <Button
-          size="small"
-          variant="contained"
-          sx={{
-            fontWeight: 'bold',
-            border: '1px solid white',
-            backgroundColor: '#f7e9c4',
-            borderRadius: 1,
+        <NavLink
+          style={({ isActive }) => ({
             padding: '5px',
-            ':focus-within': { backgroundColor: '#cbba83' },
-          }}
+            border: '1px solid white',
+            borderRadius: '10%',
+            textDecoration: 'none',
+            background: isActive ? '#cbba83' : '#f7e9c4',
+          })}
+          to="/contacts"
         >
-          <NavLink style={{ textDecoration: 'none' }} to="/contacts">
-            <Typography
-              sx={{
-                color: '#1976d2',
-                ':hover': { color: 'red' },
-                fontWeight: 'bold',
-              }}
-            >
-              Contacts
-            </Typography>
-          </NavLink>
-        </Button>
+          <Typography
+            sx={{
+              color: '#1976d2',
+              ':hover': { color: 'red' },
+              fontWeight: 'bolder',
+            }}
+          >
+            CONTACTS
+          </Typography>
+        </NavLink>
       ) : (
-        <Button
-          size="small"
-          variant="contained"
-          sx={{
-            fontWeight: 'bold',
-            border: '1px solid white',
-            backgroundColor: '#f7e9c4',
-            borderRadius: 1,
+        <NavLink
+          style={({ isActive }) => ({
             padding: '5px',
-            ':focus-within': { backgroundColor: '#cbba83' },
-          }}
+            border: '1px solid white',
+            borderRadius: '10%',
+            textDecoration: 'none',
+            background: isActive ? '#cbba83' : '#f7e9c4',
+          })}
+          to="/"
         >
-          <NavLink style={{ textDecoration: 'none' }} to="/">
-            <Typography
-              sx={{
-                color: '#1976d2',
-                ':hover': { color: 'red' },
-                fontWeight: 'bold',
-              }}
-            >
-              Start
-            </Typography>
-          </NavLink>
-        </Button>
+          <Typography
+            sx={{
+              color: '#1976d2',
+              ':hover': { color: 'red' },
+              fontWeight: 'bolder',
+            }}
+          >
+            START
+          </Typography>
+        </NavLink>
       )}
-    </Box>
+    </>
   );
 };
