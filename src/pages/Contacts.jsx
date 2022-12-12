@@ -1,13 +1,13 @@
 import ContactForm from '../components/ContactForm/ContactForm';
-import ContactList from '../components/ContactList/ContactList';
-import Section from '../components/Section/Section';
-import Filter from '../components/Filter/Filter';
+import ContactList from '../components/ContactList';
+import Section from '../components/Section';
+import Filter from '../components/Filter';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
 import { selectIsLoading, selectError } from 'redux/selectors';
 import { ThreeDots } from 'react-loader-spinner';
-import { Wrapper } from '../components/App.styled';
+import { Wrapper } from '../components/App/App.styled';
 
 const Contacts = () => {
   const dispatch = useDispatch();

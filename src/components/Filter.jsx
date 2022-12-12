@@ -22,7 +22,12 @@ const Filter = () => {
       }}
     >
       <Form>
-        <Typography variant="body" component="label" color="#1976d2" sx={{fontSize: {xs: '20px', sm: '28px'}}}>
+        <Typography
+          variant="body"
+          component="label"
+          color="#1976d2"
+          sx={{ fontSize: { xs: '20px', sm: '28px' } }}
+        >
           Find contacts by name
         </Typography>
         <TextField

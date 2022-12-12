@@ -96,8 +96,7 @@ const ContactForm = () => {
           type="submit"
           sx={{
             m: 'auto',
-            fontSize: {xs: 10, sm: 20},
-            
+            fontSize: { xs: 10, sm: 20 },
           }}
         >
           Add contact
@@ -108,4 +107,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-

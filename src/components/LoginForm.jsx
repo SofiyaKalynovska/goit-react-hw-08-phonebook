@@ -1,18 +1,24 @@
 import { useDispatch } from 'react-redux';
-import { register } from '../../redux/authOperations';
-import { PersonAddAlt1TwoTone } from '@mui/icons-material';
-import { Avatar, Container, Box, Typography, TextField, Button } from '@mui/material';
+import { logIn } from '../redux/authOperations';
+import { LoginTwoTone } from '@mui/icons-material';
+import {
+  Avatar,
+  Container,
+  Box,
+  Typography,
+  TextField,
+  Button,
+} from '@mui/material';
 import { Form } from 'components/ContactForm/ContactForm.styled';
 
-export const RegisterForm = () => {
+export const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      register({
-        name: form.elements.name.value,
+      logIn({
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -35,7 +41,7 @@ export const RegisterForm = () => {
         }}
       >
         <Avatar alt="Register icon" sx={{ m: 1 }}>
-          <PersonAddAlt1TwoTone />
+          <LoginTwoTone />
         </Avatar>
         <Typography
           component="h1"
@@ -43,27 +49,9 @@ export const RegisterForm = () => {
           color="#1976d2"
           sx={{ fontSize: { xs: 26, sm: 28, md: 32, xl: 36 } }}
         >
-          Sign in
+          Log in
         </Typography>
         <Form onSubmit={handleSubmit} autoComplete="off">
-          <Typography
-            variant="body"
-            component="label"
-            color="#1976d2"
-            sx={{ fontSize: { xs: 20, sm: 22, md: 24, xl: 26 } }}
-          >
-            Username
-          </Typography>
-          <TextField
-            fullWidth
-            label="Provide name"
-            variant="outlined"
-            type="text"
-            fontSize="40"
-            name="name"
-            required
-            inputProps={{ style: { fontSize: 24 } }}
-          />
           <Typography
             variant="body"
             component="label"
@@ -97,7 +85,7 @@ export const RegisterForm = () => {
             inputProps={{ style: { fontSize: 24 } }}
           />
           <Button variant="contained" size="large" color="info" type="submit">
-            Register
+            Log in
           </Button>
         </Form>
       </Box>
