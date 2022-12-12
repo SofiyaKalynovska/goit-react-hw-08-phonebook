@@ -55,7 +55,7 @@ export const RegisterForm = () => {
             Username
           </Typography>
           <TextField
-            fullWidth="true"
+            fullWidth
             label="Provide name"
             variant="outlined"
             type="text"
