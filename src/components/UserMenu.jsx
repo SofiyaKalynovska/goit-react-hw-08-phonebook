@@ -26,21 +26,26 @@ export const UserMenu = () => {
       </Typography>
       <Button
         sx={{
-          ':hover': {
-            color: '#f7e9c4',
-          },
-          maxHeight: '25px',
           fontWeight: 'bold',
-          color: '#1976d2',
           border: '1px solid white',
           backgroundColor: '#f7e9c4',
+          borderRadius: 1,
+          ':focus-within': { backgroundColor: '#cbba83' },
         }}
         size="small"
         variant="contained"
         type="button"
         onClick={() => dispatch(logOut())}
       >
-        Log out
+        <Typography
+          sx={{
+            color: '#1976d2',
+            ':hover': { color: 'red' },
+            fontWeight: 'bold',
+          }}
+        >
+          Log out
+        </Typography>
       </Button>
     </Box>
   );
